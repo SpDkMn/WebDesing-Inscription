@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Registro de Postulante</title>
+    <title>Universidad Nacional de la Vida || Proceso de inscripción 2016-II</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,6 +18,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="css/bootstrap-chosen.css">
+    
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -29,6 +32,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
+    h3{
+      margin-top: 10px;
+    }
     .jumbotron{
       padding-bottom: 10px;
     }
@@ -44,7 +50,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Universidad de la Vida</a>
+          <a class="navbar-brand" href="#">Universidad Nacional de la Vida</a>
         </div>
         <div class="progress">
           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -83,52 +89,61 @@
               <div class="panel-heading">Datos Generales</div>
               <div class="panel-body">
                 <div class="form-group has-error">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
+                  <label for="apellidoPaterno">Apellido Paterno</label>
+                  <input type="text" class="form-control" id="apellidoPaterno" data-toggle="tooltip" data-placement="bottom" title="Ingrese su primer apellido"  placeholder="Apellido Paterno">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="text" class="form-control" id="text" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..." placeholder="Password">
+                  <label for="apellidoMaterno">Apellido Materno</label>
+                  <input type="text" class="form-control" id="apellidoMaterno" data-toggle="tooltip" data-placement="bottom" title="Ingrese su segundo apellido" placeholder="Apellido Materno">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
+                  <label for="nombres">Nombre</label>
+                  <input type="text" class="form-control" id="nombres" data-toggle="tooltip" data-placement="bottom" title="Ingrese sus nombres"  placeholder="Nombre">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
+                  <label for="genero">Genero</label><br/>
+                  <label id="genero" class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Masculino
+                  </label>
+                  <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Femenino
+                  </label>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
+                  <label for="fechaNacimiento">Fecha de nacimiento</label>
+                  <div class="input-group date">
+                    <input type="text" id="fechaNacimiento" class="form-control datepicke" value="12-02-2012" readonly>
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar calendar"></span>
+                    </div>
+                </div>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
+                  <label for="numeroDocumentoIdentidad">Numero de documento de identidad</label>
+                  <input type="text" class="form-control" id="numeroDocumentoIdentidad" data-toggle="tooltip" data-placement="bottom" title="Ingrese el numero de su DNI"  placeholder="Documento de identidad">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
+                  <label for="numeroMatricula">Numero de matricula</label>
+                  <input type="text" class="form-control" id="numeroMatricula" data-toggle="tooltip" data-placement="bottom" title="Ingrese su numero de matrícula"  placeholder="Numero de matricula">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
+                  <label for="telefonoFijo">Telefono fijo</label>
+                  <input type="text" class="form-control" id="telefonoFijo" data-toggle="tooltip" data-placement="bottom" title="Ingrese su telefono fijo"  placeholder="Telefono fijo">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
+                  <label for="telefonoCelular">Telefono celular</label>
+                  <input type="text" class="form-control" id="telefonoCelular" data-toggle="tooltip" data-placement="bottom" title="Ingrese su telefono celular"  placeholder="Telefono celular">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
+                  <label for="telefonoReferencia">Telefono de referencia</label>
+                  <input type="text" class="form-control" id="telefonoReferencia" data-toggle="tooltip" data-placement="bottom" title="Ingrese un telefono de referencia"  placeholder="Telefono de referencia">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
+                  <label for="correoElectronico">Correo electronico</label>
+                  <input type="email" class="form-control" id="correoElectronico" data-toggle="tooltip" data-placement="bottom" title="Ingrese su correo electronico"  placeholder="Correo electronico">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
+                  <input type="checkbox" id="invidente" value="invidente"> Soy invidente (ciego)
                 </div>
               </div>
             </div>
@@ -137,44 +152,99 @@
             <div class="panel panel-success">
               <div class="panel-heading">Datos de procedencia y Educación</div>
               <div class="panel-body">
+                <h3>Procedencia </h3>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="departamentoNacimiento">Departamento/Región de nacimiento</label>
+                  <select data-placeholder="Departamento" id="departamentoNacimiento" class="chosen-select" tabindex="2">
+                    <option value=""></option>
+                    <option value="Amazonas">Amazonas</option>
+                    <option value="Ancash">Ancash</option>
+                    <option value="Apurimac">Apurimac</option>
+                    <option value="Arequipa">Arequipa</option>
+                    <option value="Ayacucho">Ayacucho</option>
+                    <option value="Cajamarca">Cajamarca</option>
+                    <option value="Callao">Callao</option>
+                    <option value="Cusco">Cusco</option>
+                    <option value="Huancavelica">Huancavelica</option>
+                    <option value="Huanuco">Huanuco</option>
+                    <option value="Ica">Ica</option>
+                    <option value="Junin">Junin</option>
+                    <option value="La Libertad">La Libertad</option>
+                    <option value="Lambayeque">Lambayeque</option>
+                    <option value="Lima">Lima</option>
+                    <option value="Loreto">Loreto</option>
+                    <option value="Madre De Dios">Madre De Dios</option>
+                    <option value="Moquegua">Moquegua</option>
+                    <option value="Pasco">Pasco</option>
+                    <option value="Piura">Piura</option>
+                    <option value="Puno">Puno</option>
+                    <option value="San Martin">San Martin</option>
+                    <option value="Tacna">Tacna</option>
+                    <option value="Tumbes">Tumbes</option>
+                    <option value="Ucayali">Ucayali</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="departamentoResidencia">Departamento/Region de residencia</label>
+                  <select data-placeholder="Departamento" id="departamentoResidencia" class="chosen-select" tabindex="2">
+                    <option value=""></option>
+                    <option value="Amazonas">Amazonas</option>
+                    <option value="Ancash">Ancash</option>
+                    <option value="Apurimac">Apurimac</option>
+                    <option value="Arequipa">Arequipa</option>
+                    <option value="Ayacucho">Ayacucho</option>
+                    <option value="Cajamarca">Cajamarca</option>
+                    <option value="Callao">Callao</option>
+                    <option value="Cusco">Cusco</option>
+                    <option value="Huancavelica">Huancavelica</option>
+                    <option value="Huanuco">Huanuco</option>
+                    <option value="Ica">Ica</option>
+                    <option value="Junin">Junin</option>
+                    <option value="La Libertad">La Libertad</option>
+                    <option value="Lambayeque">Lambayeque</option>
+                    <option value="Lima">Lima</option>
+                    <option value="Loreto">Loreto</option>
+                    <option value="Madre De Dios">Madre De Dios</option>
+                    <option value="Moquegua">Moquegua</option>
+                    <option value="Pasco">Pasco</option>
+                    <option value="Piura">Piura</option>
+                    <option value="Puno">Puno</option>
+                    <option value="San Martin">San Martin</option>
+                    <option value="Tacna">Tacna</option>
+                    <option value="Tumbes">Tumbes</option>
+                    <option value="Ucayali">Ucayali</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Provincia de residencia</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Distrito de residencia</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="exampleInputEmail1">Dirección</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Sede donde rendirá el examen</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="exampleInputEmail1">Intituto educativo de procedencia</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Usted estudió bachillerato</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="exampleInputEmail1">Departamento/Región del colegio</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Año que terminó la educación secundaria</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
                 </div>
               </div>
@@ -185,23 +255,27 @@
               <div class="panel-heading">Datos Adicionales</div>
               <div class="panel-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="exampleInputEmail1">¿Con quién reside?</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Nombre del padre, madre o tutor</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="exampleInputEmail1">Telefono del padre, madre o tutor</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Numero de veces que postuló a la Universidad</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..."  placeholder="Password">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="exampleInputEmail1">Tipo de preparación</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..." placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Medio por el cual se informó del examen de admisión</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" data-toggle="tooltip" data-placement="bottom" title="Ingrese su..." placeholder="Email">
                 </div>
                 <div class="form-group has-success has-feedback">
@@ -236,14 +310,26 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/chosen.jquery.js"></script>
+    
     <script type="text/javascript">
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
+      $('.calendar').datepicker({format: 'dd/mm/yyyy'})
+      .on('changeDate',function(ev){
+        date = ev.dates;
+        day = date[0].getDate()
+        month = ((date[0].getMonth()).toString().length == 1) ? "0"+(date[0].getMonth()+1) : date[0].getMonth();
+        year = date[0].getUTCFullYear()
+        EndDate =  day+"-"+month+"-"+year
+        $('.datepicke').val(EndDate)
+      })
+      $('.chosen-select').chosen();
     })
     </script>
 </body></html>
